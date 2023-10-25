@@ -1,0 +1,21 @@
+name: scryfall_db
+description: A sample command-line application.
+version: 0.0.1
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.1.2
+
+# Add regular dependencies here.
+dependencies:
+
+  compute: ^1.0.2
+
+  excel: ^2.1.0
+
+  # path: ^1.8.0
+  http: ^1.1.0
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0
