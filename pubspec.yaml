@@ -1,20 +1,24 @@
 name: scryfall_db
 description: A sample command-line application.
 version: 0.0.1
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/nsNeruno/scryfall_db.git
 
 environment:
-  sdk: ^3.1.2
+  sdk: ">=2.19.6 <4.0.0"
 
 # Add regular dependencies here.
 dependencies:
 
-  compute: ^1.0.2
+  # flutter:
+  #   sdk: flutter
 
-  excel: ^2.1.0
+  compute: ^1.0.2
 
   # path: ^1.8.0
   http: ^1.1.0
+
+  syncfusion_flutter_xlsio:
+    path: ./syncfusion_flutter_xlsio
 
 dev_dependencies:
   lints: ^2.0.0

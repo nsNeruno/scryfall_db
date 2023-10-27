@@ -189,6 +189,9 @@ class Card implements _ICoreCard, _IGameplayFields, _IPrintFields {
   // BEGIN: _IPrintFields
   @override
   Prices? get prices => asMapAndCast(_internal['prices'], (map) => Prices._fromMap(map,),);
+
+  @override
+  PurchaseUris? get purchaseUris => asMapAndCast(_internal['purchase_uris'], (map) => PurchaseUris._fromMap(map,),);
   // END: _IPrintFields
 
   final Map<String, dynamic> _internal;
@@ -262,7 +265,19 @@ class Prices {
   final Map<String, dynamic> _internal;
 }
 
+class PurchaseUris {
+
+  PurchaseUris._fromMap(Map<String, dynamic> data,): _internal = data;
+
+  Uri? get tcgPlayer => Uri.tryParse('${_internal['tcgplayer']}',);
+  Uri? get cardMarket => Uri.tryParse('${_internal['cardmarket']}',);
+  Uri? get cardHoarder => Uri.tryParse('${_internal['cardhoarder']}',);
+
+  final Map<String, dynamic> _internal;
+}
+
 abstract class _IPrintFields {
 
   Prices? get prices;
+  PurchaseUris? get purchaseUris;
 }
